@@ -1,0 +1,19 @@
+{
+    "title": "Programming: Assignment Operator",
+    "slug": "programming-assignment-operator",
+    "description": "Explores the assignment operator (=) across programming languages. Covers how assignment differs from mathematical equality, evaluation order (right-hand side first), why only variables can appear on the left, and how type handling varies between dynamically and statically-typed languages.",
+    "authors": [
+        "chris-cooling"
+    ],
+    "tags": [
+        "programming",
+        "pseudocode"
+    ],
+    "duration": 8,
+    "prerequisites": [
+        "programming-variables",
+        "programming-expressions"
+    ],
+    "related": [
+    ]
+}
