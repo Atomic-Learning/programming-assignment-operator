@@ -1,50 +1,22 @@
 
 <p>The assignment operator (typically <code>=</code>) is one of the most fundamental operations in programming. While it looks similar to the equals sign in mathematics, it works very differently and is worth understanding in depth.</p>
 
-<h2>Assignment vs. Equality</h2>
-
-<p>The assignment operator <code>=</code> does <strong>not</strong> behave like an equals sign in an equation. Instead, it means: <em>"Evaluate the expression on the right-hand side, then store the result in the variable on the left-hand side."</em></p>
-
-<p>This distinction is profound. In mathematics, <code>3 = x</code> is a valid equation stating that x equals 3. But in programming, you cannot assign to a literal:</p>
-
-<p><strong>Invalid in most languages:</strong></p>
-<pre><code>
-3 = x           // ERROR: Cannot assign to a literal value
-</code></pre>
-
-<p>However, assignments like this are perfectly valid in programming, even though they're mathematically nonsensical:</p>
-
-<p><strong>Valid in most languages:</strong></p>
-<pre><code>
-x = x + x       // Doubles the value of x
-y = y - 1       // Decreases y by 1
-</code></pre>
-
-<p>In algebra, <code>x = x + x</code> is only true when <code>x = 0</code>. But in programming, it's a common operation because assignment is a directional operation: "take the current value of x, add it to itself, and store the result back in x."</p>
-
 <h2>Evaluation Order: Right Before Left</h2>
 
 <p>Assignment always follows the same pattern: the expression on the right-hand side is evaluated first, and then the result is assigned to the variable on the left.</p>
 
-<p><strong>Pseudocode:</strong></p>
-<pre><code>
-x = 5
+<pre><code>x = 5
 y = x + 3       // Step 1: Evaluate x + 3 (which is 8)
                 // Step 2: Store 8 in y
 
 x = x * 2       // Step 1: Evaluate x * 2 (which is 10)
-                // Step 2: Store 10 back in x
-</code></pre>
-
-<p>This is why self-referential assignments like <code>x = x + 1</code> work: the program looks up the current value of <code>x</code>, adds 1 to it, and stores the result back in <code>x</code>.</p>
+                // Step 2: Store 10 back in x</code></pre>
 
 <h2>Assignable Locations</h2>
 
 <p>The left-hand side of an assignment must be an <strong>assignable location</strong>—often a variable. You cannot assign to literal values or arbitrary expressions:</p>
 
-<p><strong>Pseudocode examples:</strong></p>
-<pre><code>
-x = 5               // ✓ Valid: x is a variable
+
+<pre><code>x = 5               // ✓ Valid: x is a variable
 10 = x              // ✗ Invalid: 10 is a literal
-x + 3 = y           // ✗ Invalid: x + 3 is an expression
-</code></pre>
+x + 3 = y           // ✗ Invalid: x + 3 is an expression</code></pre>
